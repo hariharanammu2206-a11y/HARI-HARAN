@@ -1,0 +1,13 @@
+,Chocolate Sales - Day3,,,,
+,,,,,
+OrderNo,Sales Person,Geography,ProductID,Sales Date,Quantity
+Ord_300,Curtice Advani,UK,Prd_108,13-12-2021,221
+Ord_301,Karlen McCaffrey,UK#,Prd_109,13-12-2021,45
+Ord_302,Husein Augar,India,Prd_110,13-12-2021,207
+Ord_303,Karlen McCaffrey,USA,Prd_111,13-12-2021,208
+Ord_304,Curtice Advani,New Zealand,Prd_112,13-12-2021,31
+Ord_305,Husein Augar,USA$,Prd_112,13-12-2021,77
+Ord_306,Husein Augar,Australia,Prd_113,13-12-2021,212
+Ord_307,Dennison Crosswaite,India,Prd_101,13-12-2021,174
+Ord_308,Kaine Padly,India,Prd_113,13-12-2021,537
+Ord_309,Curtice Advani,UK,Prd_102,13-12-2021,334

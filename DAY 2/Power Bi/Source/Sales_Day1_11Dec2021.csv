@@ -1,0 +1,10 @@
+,Chocolate Sales - Day1,,,,,
+,,,,,,
+OrderNo,Sales Person,Geography,ProductID,Sales Date,Quantity,Customer Rating
+Ord_100,Dennison Crosswaite,UK,Prd_100,11-12-2021,422,1
+Ord_101,Kelci Walkden,India,Prd_100,11-12-2021,126,4
+Ord_102,Gigi Bohling,Canada,Prd_101,11-12-2021,200,3
+Ord_103,Madelene Upcott,India,Prd_102,11-12-2021,252,1
+Ord_104,Oby Sorrel,USA,Prd_103,11-12-2021,71,5
+Ord_102,Gigi Bohling,Canada,Prd_101,11-12-2021,200,3
+Ord_100,Dennison Crosswaite,United Kingdom,Prd_100,11-12-2021,422,1
