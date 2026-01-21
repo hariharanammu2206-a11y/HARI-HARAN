@@ -1,0 +1,6 @@
+A Power BI dashboard is created by importing data from different sources, cleaning and modeling it, and then using visual tools like charts and cards to display key insights. It provides a single-page, interactive view of important business metrics for quick decision-making.
+QUESTIONS:
+SUM OF QUANTITY BY FOOD TYPE
+COUNT OF FOOD ITEMS
+SUM OF QUANTITY OF FOOD ITEMS CANCELLED AND DELIVERED
+SUM OF QUANTITY BY MEMBERS TYPE AND PAYMENT METHOD
