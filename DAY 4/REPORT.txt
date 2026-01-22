@@ -1,0 +1,2 @@
+Power BI – Day 4 Report
+On Day 4, data was imported from a MySQL database into Power BI. The dataset was cleaned and edited using Power Query, and interactive dashboards were created with visuals to analyze and present insights effectively.
