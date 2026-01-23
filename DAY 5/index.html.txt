@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gold Interactive Dashboard</title>
+
+<!-- CHART LIBRARY -->
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+header {
+  padding: 16px 24px;
+  background: #020617;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 1px solid #1e293b;
+}
+.dashboard {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+.card {
+  background: #020617;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+.full {
+  grid-column: span 2;
+}
+.kpi {
+  display: flex;
+  justify-content: space-between;
+}
+.kpi div {
+  width: 32%;
+  padding: 14px;
+  border-radius: 10px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  text-align: center;
+}
+.kpi h3 {
+  margin: 6px 0;
+  font-size: 18px;
+}
+.kpi p {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>📊 Gold Price Interactive Dashboard</header>
+
+<div class="dashboard">
+
+  <!-- KPI SECTION -->
+  <div class="card full">
+    <div class="kpi">
+      <div>
+        <p>Latest Price</p>
+        <h3 id="latest"></h3>
+      </div>
+      <div>
+        <p>Highest Price</p>
+        <h3 id="highest"></h3>
+      </div>
+      <div>
+        <p>Lowest Price</p>
+        <h3 id="lowest"></h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICE TREND -->
+  <div class="card full">
+    <div id="priceChart"></div>
+  </div>
+
+  <!-- VOLUME -->
+  <div class="card">
+    <div id="volumeChart"></div>
+  </div>
+
+  <!-- CHANGE % -->
+  <div class="card">
+    <div id="changeChart"></div>
+  </div>
+
+</div>
+
+<script>
+/* ===============================
+   ORIGINAL JSON DATA (RESERVED)
+   =============================== */
+const goldData = [
+ {"Date":"20/01/2026","Price":"6,876.50","Vol.":"77.23K","Change %":"1.66%"},
+ {"Date":"19/01/2026","Price":"6,764.20","Vol.":"82.68K","Change %":"1.14%"},
+ {"Date":"16/01/2026","Price":"6,687.90","Vol.":"88.38K","Change %":"0.06%"},
+ {"Date":"15/01/2026","Price":"6,683.80","Vol.":"61.86K","Change %":"-0.27%"},
+ {"Date":"14/01/2026","Price":"6,701.70","Vol.":"163.71K","Change %":"-0.56%"},
+ {"Date":"12/01/2026","Price":"6,716.60","Vol.":"336.95K","Change %":"2.53%"}
+];
+
+/* ===============================
+   DATA PARSING (NO DATA LOST)
+   =============================== */
+const dates = goldData.map(d => d.Date);
+const prices = goldData.map(d => parseFloat(d.Price.replace(/,/g,"")));
+const volume = goldData.map(d => parseFloat(d["Vol."].replace("K","")));
+const change = goldData.map(d => parseFloat(d["Change %"].replace("%","")));
+
+/* ===============================
+   KPI VALUES
+   =============================== */
+document.getElementById("latest").innerText = "₹ " + prices[0];
+document.getElementById("highest").innerText = "₹ " + Math.max(...prices);
+document.getElementById("lowest").innerText = "₹ " + Math.min(...prices);
+
+/* ===============================
+   PRICE TREND
+   =============================== */
+new ApexCharts(document.querySelector("#priceChart"), {
+  chart: { type: 'line', height: 320, zoom: { enabled: true } },
+  series: [{ name: "Gold Price", data: prices }],
+  xaxis: { categories: dates },
+  stroke: { curve: 'smooth', width: 3 },
+  theme: { mode: 'dark' },
+  title: { text: "Gold Price Trend", align: "left" }
+}).render();
+
+/* ===============================
+   VOLUME CHART
+   =============================== */
+new ApexCharts(document.querySelector("#volumeChart"), {
+  chart: { type: 'bar', height: 260 },
+  series: [{ name: "Volume (K)", data: volume }],
+  xaxis: { categories: dates },
+  theme: { mode: 'dark' },
+  title: { text: "Trading Volume", align: "left" }
+}).render();
+
+/* ===============================
+   CHANGE % CHART
+   =============================== */
+new ApexCharts(document.querySelector("#changeChart"), {
+  chart: { type: 'bar', height: 260 },
+  series: [{ name: "Change %", data: change }],
+  xaxis: { categories: dates },
+  colors: ["#22c55e"],
+  theme: { mode: 'dark' },
+  title: { text: "Daily % Change", align: "left" }
+}).render();
+</script>
+
+</body>
+</html>
