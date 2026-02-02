@@ -1,0 +1,33 @@
+Dashboard 1: Sales and Product Category Analysis
+
+Total Sales: 114K with an average rating of 2.64, indicating moderate customer satisfaction.
+
+Top Performing Category: Fashion leads in total sales and contribution share.
+
+Other Key Categories: Health & Beauty and Home & Office show steady performance; Electronics contributes the least.
+
+Sales Contribution: Fashion accounts for the highest percentage of overall revenue, followed by Health & Beauty.
+
+Sales Trend: Cumulative sales show consistent growth over time with minor fluctuations.
+
+Geographical Distribution: Sales are spread across multiple zones, with stronger concentration in select regions.
+
+Key Insight:
+Fashion drives revenue, but average ratings suggest room for improving customer experience.
+
+Dashboard 2: Operational Efficiency and Logistics
+
+Total Sales: 114K with an average sale price of 227.93.
+
+Order Volume: 2,739 total orders processed.
+
+Delivery Types: Express delivery handles the highest order count, followed by Shipped from Abroad and Standard Delivery.
+
+Category Demand: Fashion has the highest order quantity, indicating strong customer demand.
+
+Ratings Impact: Higher sales are associated with lower-to-mid ratings (1–3), suggesting volume-driven sales.
+
+Zone Performance: Certain zones contribute significantly more sales, especially through Express delivery.
+
+Key Insight:
+Efficient delivery (especially Express) plays a crucial role in higher order volumes and sales.
